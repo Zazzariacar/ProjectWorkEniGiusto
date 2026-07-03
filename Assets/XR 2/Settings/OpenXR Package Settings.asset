@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f7a7b4a7bf27d4d96b8eb673f5174e, type: 3}
   m_Name: OculusTouchControllerProximityProfile Android
   m_EditorClassIdentifier: Oculus.VR::Meta.XR.OculusTouchControllerProximityProfile
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Oculus Touch Controller Proximity Interaction
   version: 0.0.1
   featureIdInternal: com.meta.openxr.feature.input.oculustouch.proximity
@@ -604,9 +604,6 @@ MonoBehaviour:
   - {fileID: -9106798199633097514}
   - {fileID: 7761055107024035759}
   - {fileID: -5346096591073368840}
-  - {fileID: 6573316324942393669}
-  - {fileID: 1592672575496645855}
-  - {fileID: -6910704864963365882}
   - {fileID: -5492106289106495454}
   - {fileID: 1696145356246401211}
   - {fileID: -5428264451966364530}
@@ -618,15 +615,10 @@ MonoBehaviour:
   - {fileID: 6597706141816289852}
   - {fileID: 6300533628325586591}
   - {fileID: 9046539516879854903}
-  - {fileID: 7869824262839344772}
-  - {fileID: -672275709235641336}
-  - {fileID: 289441064020390104}
-  - {fileID: 1152086211490389428}
   - {fileID: 6969330182353826345}
   - {fileID: -4683517664111799601}
   - {fileID: -1843655640618522769}
   - {fileID: -2124622197504067981}
-  - {fileID: -6131781613039541563}
   - {fileID: 4862102520490707525}
   - {fileID: 228609467008605423}
   - {fileID: -8638533718782407108}
@@ -727,7 +719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feeef8d85de8db242bdda70cc7ff5acd, type: 3}
   m_Name: OculusTouchControllerProfile Android
   m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.Features.Interactions.OculusTouchControllerProfile
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Oculus Touch Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.oculustouch
@@ -874,7 +866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4710975c7840e7d499bbb3757c22b0a5, type: 3}
   m_Name: MetaXRSubsampledLayout Android
   m_EditorClassIdentifier: Oculus.VR::Meta.XR.MetaXRSubsampledLayout
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Meta XR Subsampled Layout
   version: 0.0.1
   featureIdInternal: com.meta.openxr.feature.subsampledLayout
@@ -1133,9 +1125,6 @@ MonoBehaviour:
   - {fileID: -7193985670567055428}
   - {fileID: 6284136420873602177}
   - {fileID: -3384534269496381385}
-  - {fileID: 4220440010783555287}
-  - {fileID: -4956677273276624746}
-  - {fileID: -5627411830294932807}
   - {fileID: -3881339721180612029}
   - {fileID: -6076480035541435860}
   - {fileID: 3581157264157506792}
@@ -1146,16 +1135,10 @@ MonoBehaviour:
   - {fileID: 6528843003048692358}
   - {fileID: 2493147238169199254}
   - {fileID: -7884266419100096261}
-  - {fileID: -7189965326362238260}
-  - {fileID: -8832376093520548385}
-  - {fileID: 5324362683680055819}
-  - {fileID: -9179955870048236767}
-  - {fileID: -1918065305907227548}
   - {fileID: -6825405194981251487}
   - {fileID: 7382624178674497597}
   - {fileID: 1108430032258629561}
   - {fileID: -4945913556866482533}
-  - {fileID: -7670855931069265729}
   - {fileID: -4979536907952847080}
   - {fileID: -752288387770292623}
   - {fileID: -172335927210713780}
