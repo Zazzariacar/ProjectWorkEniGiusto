@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 5237562494172848542}
   - component: {fileID: 3483912899186678042}
   - component: {fileID: 3152317380016159488}
+  - component: {fileID: 2180540734502619869}
   m_Layer: 0
   m_Name: Corpo
   m_TagString: Untagged
@@ -146,6 +147,28 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3329902420748629119, guid: 09501d789c63cdf44b2c8b732f84e61d, type: 3}
+--- !u!64 &2180540734502619869
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710477996869480043}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3329902420748629119, guid: 09501d789c63cdf44b2c8b732f84e61d, type: 3}
 --- !u!1 &8362528642378542192
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,8 +181,10 @@ GameObject:
   - component: {fileID: 2317321069938052197}
   - component: {fileID: 5783985907984869841}
   - component: {fileID: 4100408121318071808}
-  - component: {fileID: 8114146476693321490}
   - component: {fileID: 6499454704139590790}
+  - component: {fileID: 7293297661179796554}
+  - component: {fileID: 5166984108034121762}
+  - component: {fileID: 5579649910308114092}
   m_Layer: 0
   m_Name: Coperchio
   m_TagString: Untagged
@@ -261,7 +286,44 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8552134717624371188, guid: 09501d789c63cdf44b2c8b732f84e61d, type: 3}
---- !u!114 &8114146476693321490
+--- !u!114 &6499454704139590790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8362528642378542192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa6ec21bd334444892c7ea049af84ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CoperchioCassa
+  puntoAtterraggio: {fileID: 0}
+  durataSparizione: 0.3
+  durataAtterraggio: 0.5
+--- !u!64 &7293297661179796554
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8362528642378542192}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8552134717624371188, guid: 09501d789c63cdf44b2c8b732f84e61d, type: 3}
+--- !u!114 &5166984108034121762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -335,7 +397,7 @@ MonoBehaviour:
   m_StartingInteractionStrengthFilters: []
   m_AutoFindParentInteractableInHierarchy: 0
   m_ParentInteractableObject: {fileID: 0}
---- !u!114 &6499454704139590790
+--- !u!114 &5579649910308114092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
