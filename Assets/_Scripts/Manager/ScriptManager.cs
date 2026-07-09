@@ -114,8 +114,10 @@ public class ScriptManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Aggiorna la casella di testo del Canvas stampando i nomi dei DPI
-    /// presenti nel dizionario, uno per riga.
+    /// Aggiorna la casella di testo del Canvas stampando, per ogni DPI del dizionario,
+    /// una riga con un quadrato/checkbox iniziale, un tab e la frase, in base allo stato:
+    /// - non indossato: '☐ [tab] Indossa "nomeDpi"' (testo normale)
+    /// - indossato: '☑ [tab] Indossato "nomeDpi"' barrato, verde se fondamentale, arancione se no
     /// </summary>
     public void UpdateUI()
     {
@@ -130,7 +132,18 @@ public class ScriptManager : MonoBehaviour
         foreach (var coppia in dpiDictionary)
         {
             string nomeDpi = coppia.Key.Item2;
-            sb.AppendLine(nomeDpi);
+            bool indossato = coppia.Value[INDICE_INDOSSATO];
+            bool fondamentale = coppia.Value[INDICE_FONDAMENTALE];
+
+            if (!indossato)
+            {
+                sb.AppendLine($"☐\tIndossa \"{nomeDpi}\"");
+            }
+            else
+            {
+                string colore = fondamentale ? "green" : "orange";
+                sb.AppendLine($"<color={colore}><s>☑\tIndossato \"{nomeDpi}\"</s></color>");
+            }
         }
 
         textBox.text = sb.ToString();
