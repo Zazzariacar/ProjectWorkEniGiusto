@@ -144,7 +144,7 @@ public class CoperchioCassa : MonoBehaviour
         // Passa la lista completa degli oggetti spawnati a ScriptManager
         if (scriptManager != null)
         {
-            scriptManager.ListToDizionario(oggettiSpawnati.ToArray());
+            scriptManager.ListToDizionario(oggettiSpawnati);
             scriptManager.UpdateUI();
         }
         else
