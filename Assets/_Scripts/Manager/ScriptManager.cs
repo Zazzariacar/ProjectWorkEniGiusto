@@ -60,6 +60,8 @@ public class ScriptManager : MonoBehaviour
         {
             if (dpi == null) continue;
 
+            string nomePulito = dpi.name.Replace("(Clone)", "").Trim();
+
             var chiave = (dpi, dpi.name);
 
             if (dpiDictionary.ContainsKey(chiave))
