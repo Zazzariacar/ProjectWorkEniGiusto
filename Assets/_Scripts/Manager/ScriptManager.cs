@@ -130,13 +130,14 @@ public class ScriptManager : MonoBehaviour
         }
 
         StringBuilder sb = new StringBuilder();
-
+        sb.AppendLine($"Punteggio: {punteggio}")
         foreach (var coppia in dpiDictionary)
         {
             string nomeDpi = coppia.Key.Item2;
             bool indossato = coppia.Value[INDICE_INDOSSATO];
             bool fondamentale = coppia.Value[INDICE_FONDAMENTALE];
 
+            
             if (!indossato)
             {
                 sb.AppendLine($"☐\tIndossa \"{nomeDpi}\"");
