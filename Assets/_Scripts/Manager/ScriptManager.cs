@@ -7,7 +7,7 @@ using TMPro;
 /// Gestisce il dizionario dei DPI (Dispositivi di Protezione Individuale)
 /// e l'aggiornamento della UI 2D che mostra i loro nomi.
 ///
-/// Si integra con lo script del collaboratore "ScriptUi":
+/// Si integra con lo script del collaboratore "ScriptUI":
 /// - "OnDpiEquipped" è un evento STATICO di tipo Action<DPIdata>: ci iscriviamo
 ///   una sola volta (OnEnable/OnDisable), non per ogni singolo DPI.
 /// - "DPIdata" è lo ScriptableObject passato dall'evento: da lì leggiamo sia
@@ -30,16 +30,18 @@ public class ScriptManager : MonoBehaviour
     private const int INDICE_INDOSSATO = 0;
     private const int INDICE_FONDAMENTALE = 1;
 
+    private int punteggio;
+
     // L'evento OnDpiEquipped è statico: iscrizione unica per tutta la classe,
     // gestita in OnEnable/OnDisable (non serve iscriversi per ogni singolo DPI).
     private void OnEnable()
     {
-        ScriptUi.OnDpiEquipped += GestisciIndossato;
+        ScriptUI.OnDpiEquipped += GestisciIndossato;
     }
 
     private void OnDisable()
     {
-        ScriptUi.OnDpiEquipped -= GestisciIndossato;
+        ScriptUI.OnDpiEquipped -= GestisciIndossato;
     }
 
     /// <summary>
@@ -78,7 +80,7 @@ public class ScriptManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Chiamato quando un DPI viene indossato (evento statico OnDpiEquipped di ScriptUi,
+    /// Chiamato quando un DPI viene indossato (evento statico OnDpiEquipped di ScriptUI,
     /// lanciato da IndossaOggetto). Riceve il DPIdata del DPI indossato: da qui leggiamo
     /// sia il nome (per trovare la chiave nel dizionario) sia "isFondamentale", e
     /// impostiamo entrambi i bool ("indossato" e "fondamentale") in un colpo solo.
@@ -142,6 +144,7 @@ public class ScriptManager : MonoBehaviour
             else
             {
                 string colore = fondamentale ? "green" : "orange";
+                punteggio += fondamentale ? 30 : 20;
                 sb.AppendLine($"<color={colore}><s>☑\tIndossato \"{nomeDpi}\"</s></color>");
             }
         }
