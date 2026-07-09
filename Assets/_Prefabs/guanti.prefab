@@ -192,7 +192,6 @@ GameObject:
   - component: {fileID: 5147699765348216064}
   - component: {fileID: 5832963951967816098}
   - component: {fileID: 2155915906411720072}
-  - component: {fileID: 7039816775903399874}
   m_Layer: 0
   m_Name: guanti
   m_TagString: Untagged
@@ -395,15 +394,3 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
---- !u!114 &7039816775903399874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5965751528129057373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f42bd1523ca70204082bcff372d1ea46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GuantoSocket
