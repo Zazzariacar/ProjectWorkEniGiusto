@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 7709101339475856575}
   - component: {fileID: 5985203083628641528}
   m_Layer: 0
-  m_Name: guanti
+  m_Name: Guanti
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
