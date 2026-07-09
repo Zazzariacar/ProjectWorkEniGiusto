@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ScriptUi : MonoBehaviour
+public class ScriptUI : MonoBehaviour
 {
     [Header("Configurazione")]
     [SerializeField] private DPIdata config;
@@ -13,8 +13,6 @@ public class ScriptUi : MonoBehaviour
     [SerializeField] private TextMeshProUGUI testoTitolo;
     [SerializeField] private TextMeshProUGUI testoDescrizione;
     [SerializeField] private Button bottoneIndossa;
-
-    public bool isFondamentale;
     public static event Action<DPIdata> OnDpiEquipped;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,9 +29,8 @@ public class ScriptUi : MonoBehaviour
     {
         testoTitolo.text = config.nomeDpi;
         testoDescrizione.text = config.descrizioneSpiegazione;
-        isFondamentale = config.isFondamentale;
 
-        if (isFondamentale)
+        if (config.isFondamentale)
         {
             testoTitolo.text += " (obbligatorio)";
         }
@@ -45,5 +42,6 @@ public class ScriptUi : MonoBehaviour
     {
         OnDpiEquipped?.Invoke(config);
         gameObject.SetActive(false);
+        pannelloUiSpaziale.SetActive(false);
     }
 }
