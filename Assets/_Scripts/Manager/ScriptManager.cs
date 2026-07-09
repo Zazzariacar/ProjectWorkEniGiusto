@@ -71,7 +71,7 @@ public class ScriptManager : MonoBehaviour
             }
 
             dpiDictionary.Add(chiave, new List<bool> { false, false });
-            Debug.Log($"[ScriptManager] Chiave creata per '{dpi.name}'")
+            Debug.Log($"[ScriptManager] Chiave creata per '{dpi.name}'");
         }
 
         UpdateUI();
