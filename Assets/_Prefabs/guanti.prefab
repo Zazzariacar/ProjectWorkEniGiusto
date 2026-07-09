@@ -409,10 +409,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScriptUi
   config: {fileID: 11400000, guid: 1b69497e0376a5141b9d004b337e21bf, type: 2}
-  pannelloUiSpaziale: {fileID: 0}
-  testoTitolo: {fileID: 0}
-  testoDescrizione: {fileID: 0}
-  bottoneIndossa: {fileID: 0}
+  canvasPrefab: {fileID: 3988595876302949391, guid: 9c19784be35b97e4994707246fa9808f, type: 3}
+  spawnPoint: {fileID: 9116837867819610969, guid: 079a3519ada7b8f40a8c44a003432b13, type: 3}
+  nomeTitolo: title
+  nomeDescrizione: desc
+  nomeBottone: Button
 --- !u!114 &5985203083628641528
 MonoBehaviour:
   m_ObjectHideFlags: 0
