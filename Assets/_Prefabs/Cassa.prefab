@@ -475,9 +475,10 @@ MonoBehaviour:
   durataApertura: 0.6
   prefabDaSpawnare:
   - {fileID: 990459461461314644, guid: 67a4b8f8eea38cf41b8ffff8d8fce059, type: 3}
-  - {fileID: 7000112264345696325, guid: 89e51a42f5fabf24eb95d1b6623b5416, type: 3}
+  - {fileID: 376582522813023587, guid: 8db47180755ecd549a2f387b0c8b73f9, type: 3}
   - {fileID: 8896438250864725742, guid: fd48c5895f8346d4484f60466e449e0b, type: 3}
   - {fileID: 5965751528129057373, guid: 2ab500d177f7ef649abf82f51b21f97f, type: 3}
+  - {fileID: 3393824980863508196, guid: 731effc80a169e8458c87a54952e82e8, type: 3}
   posizioneBase: {x: 107.19, y: 0.49, z: 48.134}
   zMinimo: 45
   ritardoTraSpawn: 0

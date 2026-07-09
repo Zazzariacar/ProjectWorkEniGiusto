@@ -10,7 +10,7 @@ public class ScriptUI : MonoBehaviour
 
     [Header("Canvas da istanziare")]
     [SerializeField] private GameObject canvasPrefab;   // prefab del pannello spaziale
-    [SerializeField] private Transform spawnPoint;       // dove istanziarlo (opzionale, altrimenti usa transform)
+    private GameObject cassa;       // dove istanziarlo (opzionale, altrimenti usa transform)
 
     [Header("Nomi dei figli nel prefab del canvas")]
     [SerializeField] private string nomeTitolo = "Titolo";
@@ -24,15 +24,22 @@ public class ScriptUI : MonoBehaviour
     private TextMeshProUGUI testoDescrizione;
     private Button bottoneIndossa;
 
+    void Start()
+    {
+        cassa = GameObject.Find("Cassa");
+    }
+
     public void OnPinchStart()
     {
         // Istanzia il canvas solo la prima volta
         if (pannelloUiSpaziale == null)
         {
-            Vector3 pos = spawnPoint != null ? spawnPoint.position : transform.position;
-            Quaternion rot = spawnPoint != null ? spawnPoint.rotation : transform.rotation;
+            Vector3 pos = cassa != null ? cassa.transform.position + new Vector3(0, 2, 0) : transform.position;
+            Quaternion rot = cassa != null ? cassa.transform.rotation : transform.rotation;
 
             pannelloUiSpaziale = Instantiate(canvasPrefab, pos, rot);
+            if(!pannelloUiSpaziale)
+                Debug.LogWarning("[scriptUI] impossibile spawnare pannello");
 
             Transform tTitolo = pannelloUiSpaziale.transform.Find(nomeTitolo);
             Transform tDescrizione = pannelloUiSpaziale.transform.Find(nomeDescrizione);
@@ -65,7 +72,8 @@ public class ScriptUI : MonoBehaviour
     public void IndossaOggetto()
     {
         OnDpiEquipped?.Invoke(config);
-        pannelloUiSpaziale.SetActive(false);
+        Destroy(pannelloUiSpaziale);
+        Debug.LogWarning("[scriptUI] pannello distrutto");
         gameObject.SetActive(false);
     }
 }
