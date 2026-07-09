@@ -130,7 +130,7 @@ public class ScriptManager : MonoBehaviour
         }
 
         StringBuilder sb = new StringBuilder();
-        sb.AppendLine($"Punteggio: {punteggio}")
+        sb.AppendLine($"Punteggio: {punteggio}");
         foreach (var coppia in dpiDictionary)
         {
             string nomeDpi = coppia.Key.Item2;
