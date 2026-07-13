@@ -1701,18 +1701,6 @@ PrefabInstance:
       propertyPath: puntoAtterraggio
       value: 
       objectReference: {fileID: 311315555}
-    - target: {fileID: 6499454704139590790, guid: 5192884fbac80554b80f11a978cf3d8d, type: 3}
-      propertyPath: prefabDaSpawnare.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6499454704139590790, guid: 5192884fbac80554b80f11a978cf3d8d, type: 3}
-      propertyPath: 'prefabDaSpawnare.Array.data[1]'
-      value: 
-      objectReference: {fileID: 376582522813023587, guid: 8db47180755ecd549a2f387b0c8b73f9, type: 3}
-    - target: {fileID: 6499454704139590790, guid: 5192884fbac80554b80f11a978cf3d8d, type: 3}
-      propertyPath: 'prefabDaSpawnare.Array.data[4]'
-      value: 
-      objectReference: {fileID: 3393824980863508196, guid: 731effc80a169e8458c87a54952e82e8, type: 3}
     - target: {fileID: 7383785567521643023, guid: 5192884fbac80554b80f11a978cf3d8d, type: 3}
       propertyPath: m_InteractionManager
       value: 
