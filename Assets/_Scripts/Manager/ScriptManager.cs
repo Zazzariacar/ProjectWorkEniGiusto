@@ -84,8 +84,8 @@ public class ScriptManager : MonoBehaviour
             Debug.LogWarning("[ScriptManager] Evento OnDpiEquipped ricevuto con dati null.");
             return;
         }
-
-        string nomeDpi = config.nomeDpi;
+        string[] working = config.nomeDpi.Split(' '); 
+        string nomeDpi = working[0];
         bool trovato = false;
 
         foreach (var chiave in new List<(GameObject, string)>(dpiDictionary.Keys))
