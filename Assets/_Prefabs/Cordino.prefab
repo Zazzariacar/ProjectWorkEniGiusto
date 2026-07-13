@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: -7908374492144603722}
   - component: {fileID: -7123724995125945323}
   - component: {fileID: 3575415870999443095}
+  - component: {fileID: 2318994261028126241}
   m_Layer: 0
   m_Name: Cordino
   m_TagString: Untagged
@@ -339,7 +340,24 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
+--- !u!114 &2318994261028126241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376582522813023587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436ce3da148a03c439a161e48590aeaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptUI
+  config: {fileID: 0}
+  canvasPrefab: {fileID: 0}
+  nomeTitolo: Titolo
+  nomeDescrizione: Descrizione
+  nomeBottone: BottoneIndossa
 --- !u!1 &908123557374751450
 GameObject:
   m_ObjectHideFlags: 0

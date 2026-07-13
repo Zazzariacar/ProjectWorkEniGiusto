@@ -5,7 +5,7 @@ public class DPIdata : ScriptableObject
 {
     public string nomeDpi;
     [TextArea] public string descrizioneSpiegazione;
-    //public AudioClip audioSpiegazione;
+    public AudioClip audioSpiegazione;
     //public Video videoSpiegazione;
     public bool isFondamentale;
 }
