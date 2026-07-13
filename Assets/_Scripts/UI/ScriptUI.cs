@@ -27,6 +27,7 @@ public class ScriptUI : MonoBehaviour
     void Start()
     {
         cassa = GameObject.Find("Cassa");
+        
     }
 
     public void OnPinchStart()
