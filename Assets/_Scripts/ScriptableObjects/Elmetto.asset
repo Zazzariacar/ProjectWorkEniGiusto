@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6789d108241beea4f948bb6a9ecad56a, type: 3}
   m_Name: Elmetto
   m_EditorClassIdentifier: Assembly-CSharp::DPIdata
-  nomeDpi: Elmetto
+  nomeDpi: Elmetto di protezione
   descrizioneSpiegazione: 'Funzione: Protegge la testa da urti e caduta di oggetti
     dall''alto.
 
     Come si indossa: Posizionalo sulla testa e regola il cinturino
     sottomentoniero finche'' e'' stabile.'
+  audioSpiegazione: {fileID: 8300000, guid: 9117e1417db6f2c42aa15ce50b787c9c, type: 3}
   isFondamentale: 1

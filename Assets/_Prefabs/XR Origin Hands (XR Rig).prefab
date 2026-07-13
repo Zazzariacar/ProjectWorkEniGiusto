@@ -842,10 +842,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WristGestureUI
   wrist: {fileID: 2339806236364360480}
-  headCamera: {fileID: 657184242118504721}
   checklistCanvas: {fileID: 2221452131656572896}
   angleThreshold: 40
   checkInterval: 0.1
+  palmAxis: 0
+  invertAxis: 0
 --- !u!1 &2221452131656572896
 GameObject:
   m_ObjectHideFlags: 0
@@ -2531,11 +2532,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 3843922179187644802}
   m_SourcePrefab: {fileID: 100100000, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
---- !u!4 &657184242118504721 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1767192434, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-  m_PrefabInstance: {fileID: 657184243840976483}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &657184242118504722 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1767192433, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}

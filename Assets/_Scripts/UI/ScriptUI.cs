@@ -22,6 +22,7 @@ public class ScriptUI : MonoBehaviour
 
 
     [Header("Audio DPI")]
+    [SerializeField] private AudioSource audioSource;   // assegna in Inspector, oppure viene creato automaticamente
     [SerializeField] private float volumeAudioDpi = 1f;
 
 
@@ -44,6 +45,16 @@ public class ScriptUI : MonoBehaviour
     private bool floatingAttivo = false;
 
 
+    void Awake()
+    {
+        // Crea un AudioSource dedicato per questo oggetto se non ne è stato assegnato uno
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
+
+        audioSource.playOnAwake = false;
+    }
+
+
     void Start()
     {
         cassa = GameObject.Find("Cassa");
@@ -58,7 +69,7 @@ public class ScriptUI : MonoBehaviour
         // Istanzia il canvas solo la prima volta
         if (pannelloUiSpaziale == null)
         {
-            Vector3 pos = cassa != null ? cassa.transform.position + new Vector3(0, 2, 0) : transform.position;
+            Vector3 pos = cassa != null ? cassa.transform.position + new Vector3(0, 3, 0) : transform.position;
             Quaternion rot = cassa != null ? cassa.transform.rotation : transform.rotation;
 
 
@@ -104,6 +115,7 @@ public class ScriptUI : MonoBehaviour
 
     public void IndossaOggetto()
     {
+        StopAudioDpi();
         OnDpiEquipped?.Invoke(config);
         Destroy(pannelloUiSpaziale);
         Debug.LogWarning("[scriptUI] pannello distrutto");
@@ -125,7 +137,18 @@ public class ScriptUI : MonoBehaviour
             return;
         }
 
-        AudioSource.PlayClipAtPoint(config.audioSpiegazione, transform.position, volumeAudioDpi);
+        audioSource.clip = config.audioSpiegazione;
+        audioSource.volume = volumeAudioDpi;
+        audioSource.Play();
+    }
+
+
+    public void StopAudioDpi()
+    {
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
     }
 
 
