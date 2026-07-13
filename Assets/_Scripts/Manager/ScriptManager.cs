@@ -29,6 +29,7 @@ public class ScriptManager : MonoBehaviour
     private void OnEnable()
     {
         ScriptUI.OnDpiEquipped += GestisciIndossato;
+        UpdateUI();
     }
 
     private void OnDisable()

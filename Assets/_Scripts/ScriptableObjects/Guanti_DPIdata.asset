@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6789d108241beea4f948bb6a9ecad56a, type: 3}
   m_Name: Guanti_DPIdata
   m_EditorClassIdentifier: Assembly-CSharp::DPIdata
-  nomeDpi: Guanti isolanti
+  nomeDpi: Guanti
   descrizioneSpiegazione: 'Funzione: Proteggono le mani da scariche elettriche e
     abrasioni.
 
