@@ -10,14 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6789d108241beea4f948bb6a9ecad56a, type: 3}
-  m_Name: Guanti_DPIdata
+  m_Name: Elmetto
   m_EditorClassIdentifier: Assembly-CSharp::DPIdata
-  nomeDpi: Guanti isolanti
-  descrizioneSpiegazione: 'Funzione: Proteggono le mani da scariche elettriche e
-    abrasioni.
+  nomeDpi: Elmetto di protezione
+  descrizioneSpiegazione: 'Funzione: Protegge la testa da urti e caduta di oggetti
+    dall''alto.
 
-    Come si indossa: Infila entrambe le mani assicurandoti che i
-    polsini coprano i polsi.
-
-    OBBLIGATORIO'
+    Come si indossa: Posizionalo sulla testa e regola il cinturino
+    sottomentoniero finche'' e'' stabile.'
   isFondamentale: 1

@@ -10,14 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6789d108241beea4f948bb6a9ecad56a, type: 3}
-  m_Name: Guanti_DPIdata
+  m_Name: Imbracatura
   m_EditorClassIdentifier: Assembly-CSharp::DPIdata
-  nomeDpi: Guanti isolanti
-  descrizioneSpiegazione: 'Funzione: Proteggono le mani da scariche elettriche e
-    abrasioni.
+  nomeDpi: Imbracatura anticaduta
+  descrizioneSpiegazione: 'Funzione: Trattiene il corpo in caso di caduta dall''alto.
 
-    Come si indossa: Infila entrambe le mani assicurandoti che i
-    polsini coprano i polsi.
-
-    OBBLIGATORIO'
+    Come
+    si indossa: Indossa le bretelle sulle spalle, passa le cosciali e allaccia tutte
+    le fibbie. Verifica che siano bloccate.'
   isFondamentale: 1
