@@ -93,6 +93,7 @@ public class ScriptManager : MonoBehaviour
             if (chiave.Item2 == nomeDpi)
             {
                 dpiDictionary[chiave][INDICE_INDOSSATO] = true;
+                Debug.LogWarning(dpiDictionary[chiave] + "indossato");
                 dpiDictionary[chiave][INDICE_FONDAMENTALE] = config.isFondamentale;
                 trovato = true;
                 break;
