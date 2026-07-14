@@ -79,7 +79,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 6083743817772970472}
   m_InteractionLayers:
     m_Bits: 1
   m_DistanceCalculationMode: 1
@@ -663,7 +664,6 @@ MonoBehaviour:
   puntoAtterraggio: {fileID: 0}
   durataSparizione: 0.3
   durataAtterraggio: 0.5
-  mioSuono: {fileID: 8300000, guid: 29704e61e0966784cbef791005771e62, type: 3}
   assoRotazione: {x: 1, y: 0, z: 0}
   angoloApertura: 100
   durataApertura: 0.6
@@ -678,6 +678,7 @@ MonoBehaviour:
   zMinimo: 45
   ritardoTraSpawn: 0
   scriptManager: {fileID: 0}
+  audioManager: {fileID: 0}
 --- !u!114 &5166984108034121762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,7 +692,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 4100408121318071808}
   m_InteractionLayers:
     m_Bits: 1
   m_DistanceCalculationMode: 1

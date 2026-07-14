@@ -33,6 +33,7 @@ public class CoperchioCassa : MonoBehaviour
     private XRSimpleInteractable interactable;
     private Collider colliderCoperchio;
     private Quaternion rotazioneIniziale;
+    public AudioManager audioManager;
 
     void Awake()
     {
@@ -42,7 +43,7 @@ public class CoperchioCassa : MonoBehaviour
         rotazioneIniziale = transform.localRotation;
 
         // Apertura cassa:
-        AudioManager.Instance.RiproduciAperturaCassa();
+        audioManager.RiproduciAperturaCassa();
     }
 
     void OnEnable()

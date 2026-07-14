@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6789d108241beea4f948bb6a9ecad56a, type: 3}
   m_Name: Elmetto
   m_EditorClassIdentifier: Assembly-CSharp::DPIdata
-  nomeDpi: Elmetto di protezione
+  nomeDpi: Casco di protezione
   descrizioneSpiegazione: 'Funzione: Protegge la testa da urti e caduta di oggetti
     dall''alto.
 

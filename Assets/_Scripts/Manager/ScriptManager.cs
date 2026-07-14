@@ -85,16 +85,21 @@ public class ScriptManager : MonoBehaviour
             Debug.LogWarning("[ScriptManager] Evento OnDpiEquipped ricevuto con dati null.");
             return;
         }
-        string[] working = config.nomeDpi.Split(' '); 
-        string nomeDpi = working[0];
+        
+        // Prendiamo il nome intero dallo ScriptableObject e togliamo gli spazi extra
+        string nomeDpi = config.nomeDpi.Trim();
+        string nomeDpiLower = nomeDpi.ToLower(); // Convertiamo in minuscolo per ignorare il Case
         bool trovato = false;
 
         foreach (var chiave in new List<(GameObject, string)>(dpiDictionary.Keys))
         {
-            if (chiave.Item2 == nomeDpi)
+            string nomeGameObjectLower = chiave.Item2.ToLower(); // Nome salvato in ListToDizionario in minuscolo
+
+            // Controlliamo se il nome del GameObject contiene il nome nello ScriptableObject (o viceversa)
+            if (nomeGameObjectLower.Contains(nomeDpiLower) || nomeDpiLower.Contains(nomeGameObjectLower))
             {
                 dpiDictionary[chiave][INDICE_INDOSSATO] = true;
-                Debug.LogWarning(dpiDictionary[chiave] + "indossato");
+                Debug.Log($"[ScriptManager] {chiave.Item2} indossato con successo.");
                 dpiDictionary[chiave][INDICE_FONDAMENTALE] = config.isFondamentale;
                 trovato = true;
                 break;
@@ -103,7 +108,7 @@ public class ScriptManager : MonoBehaviour
 
         if (!trovato)
         {
-            Debug.LogWarning($"[ScriptManager] Nessun DPI trovato nel dizionario con nome '{nomeDpi}'.");
+            Debug.LogWarning($"[ScriptManager] Nessun DPI trovato nel dizionario contenente il nome '{nomeDpi}'.");
         }
 
         UpdateUI();
@@ -157,13 +162,13 @@ public class ScriptManager : MonoBehaviour
 
             if (!indossato)
             {
-                righeDpi.AppendLine($"☐\tIndossa \"{nomeDpi}\"");
+                righeDpi.AppendLine($"[ ]\tIndossa \"{nomeDpi}\"");
             }
             else
             {
                 string colore = fondamentale ? "green" : "orange";
                 punteggio += fondamentale ? 30 : 20;
-                righeDpi.AppendLine($"<color={colore}><s>☑\tIndossato \"{nomeDpi}\"</s></color>");
+                righeDpi.AppendLine($"<color={colore}><s>[X]\tIndossato \"{nomeDpi}\"</s></color>");
             }
         }
 
