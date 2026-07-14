@@ -41,7 +41,7 @@ public class CoperchioCassa : MonoBehaviour
         interactable = GetComponent<XRSimpleInteractable>();
         rotazioneIniziale = transform.localRotation;
 
-        // Quando il giocatore indossa il prefab:
+        // Apertura cassa:
         AudioManager.Instance.RiproduciAperturaCassa();
     }
 

@@ -120,6 +120,9 @@ public class ScriptUI : MonoBehaviour
         Destroy(pannelloUiSpaziale);
         Debug.LogWarning("[scriptUI] pannello distrutto");
         gameObject.SetActive(false);
+
+        // Quando il giocatore indossa il prefab:
+        AudioManager.Instance.RiproduciVestizione();
     }
 
 
