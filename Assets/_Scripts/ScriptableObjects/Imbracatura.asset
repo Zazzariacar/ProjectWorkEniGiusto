@@ -20,3 +20,5 @@ MonoBehaviour:
     le fibbie. Verifica che siano bloccate.'
   audioSpiegazione: {fileID: 8300000, guid: 2099f873c481e6f4980f3d79b728a927, type: 3}
   isFondamentale: 1
+  usaSocket: 1
+  tagSocketDestinazione: SocketImbrago

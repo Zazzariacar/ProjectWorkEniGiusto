@@ -81,14 +81,47 @@ public class CassaController : MonoBehaviour
         }
     }
 
-    private void OnRilasciato(SelectExitEventArgs args)
+   private void OnRilasciato(SelectExitEventArgs args)
+{
+    // Verifica se l'interactor che ha completato l'azione è un XRSocketInteractor
+    if (args.interactorObject is XRSocketInteractor)
     {
-        // Se l'interactor che ha "rilasciato" (in realtà agganciato) è uno Socket,
-        // significa che la cassa è stata posizionata correttamente
-        if (args.interactorObject is XRSocketInteractor)
+        Debug.Log("[CassaController] Cassa inserita nel socket. Disabilitazione componenti...");
+
+        // 1. Disabilita l'interazione di presa
+        if (grabInteractable != null)
         {
-            // Disattiva il grab del padre: da qui in poi la cassa non si muove più
             grabInteractable.enabled = false;
         }
+
+        // 2. Disabilita i collider della cassa stessa (o dei suoi figli) 
+        // per evitare che le mani ci sbattano contro o che facciano collisioni strane
+        Collider[] colliders = GetComponentsInChildren<Collider>();
+        foreach (Collider col in colliders)
+        {
+            // Opzionale: se il socket ha bisogno del collider per "tenerla", 
+            // potresti voler mantenere solo il trigger, ma solitamente si disabilitano tutti.
+            col.enabled = false;
+        }
+
+        // 3. (Opzionale) Se vuoi che la cassa sia "fissa" nel socket, 
+        // disabilita anche il Rigidbody se presente
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+            rb.useGravity = false;
+        }
+
+        // 4. Abilita il coperchio ora che la cassa è ferma
+        CoperchioCassa coperchio = GetComponentInChildren<CoperchioCassa>();
+        if (coperchio != null)
+        {
+            coperchio.enabled = true;
+            // Assicuriamoci che il collider del coperchio sia riattivato
+            Collider colCoperchio = coperchio.GetComponent<Collider>();
+            if (colCoperchio != null) colCoperchio.enabled = true;
+        }
     }
+ }
 }

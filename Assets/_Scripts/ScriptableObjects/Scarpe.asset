@@ -19,3 +19,5 @@ MonoBehaviour:
     si indossa: Infilale e allaccia correttamente i lacci.'
   audioSpiegazione: {fileID: 8300000, guid: b35e76fcfbc71584db948aa70829ccb9, type: 3}
   isFondamentale: 0
+  usaSocket: 1
+  tagSocketDestinazione: SocketScarpe

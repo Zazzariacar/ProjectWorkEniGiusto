@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine;
@@ -57,6 +57,7 @@ public class CoperchioCassa : MonoBehaviour
 
     private void OnPinchSelezionato(SelectEnterEventArgs args)
     {
+         Debug.Log("Il coperchio è stato toccato/pinchato!"); // <--- AGGIUNGI QUESTO
         if (giaAperto) return;
         giaAperto = true;
         StartCoroutine(ApriCassa());

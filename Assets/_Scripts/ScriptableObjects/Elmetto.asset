@@ -20,3 +20,5 @@ MonoBehaviour:
     sottomentoniero finche'' e'' stabile.'
   audioSpiegazione: {fileID: 8300000, guid: 9117e1417db6f2c42aa15ce50b787c9c, type: 3}
   isFondamentale: 1
+  usaSocket: 1
+  tagSocketDestinazione: SocketCasco
