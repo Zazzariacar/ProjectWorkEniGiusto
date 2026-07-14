@@ -13,9 +13,6 @@ public class CoperchioCassa : MonoBehaviour
     public float durataSparizione = 0.3f;
     public float durataAtterraggio = 0.5f;
 
-    [SerializeField] private AudioClip mioSuono;
-    private AudioSource audioSource;
-
 
     [Header("Apertura coperchio (tip)")]
     public Vector3 assoRotazione = Vector3.right; // asse locale su cui ruota il coperchio
@@ -44,8 +41,8 @@ public class CoperchioCassa : MonoBehaviour
         interactable = GetComponent<XRSimpleInteractable>();
         rotazioneIniziale = transform.localRotation;
 
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.playOnAwake = false;
+        // Quando il giocatore indossa il prefab:
+        AudioManager.Instance.RiproduciAperturaCassa();
     }
 
     void OnEnable()
@@ -63,8 +60,6 @@ public class CoperchioCassa : MonoBehaviour
         if (giaAperto) return;
         giaAperto = true;
         StartCoroutine(ApriCassa());
-        audioSource.clip = mioSuono;
-        audioSource.Play();
     }
 
     private IEnumerator ApriCassa()
