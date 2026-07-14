@@ -41,9 +41,6 @@ public class CoperchioCassa : MonoBehaviour
         colliderCoperchio = GetComponent<Collider>();
         interactable = GetComponent<XRSimpleInteractable>();
         rotazioneIniziale = transform.localRotation;
-
-        // Apertura cassa:
-        audioManager.RiproduciAperturaCassa();
     }
 
     void OnEnable()
@@ -62,6 +59,9 @@ public class CoperchioCassa : MonoBehaviour
         if (giaAperto) return;
         giaAperto = true;
         StartCoroutine(ApriCassa());
+
+        // Apertura cassa:
+        audioManager.RiproduciAperturaCassa();
     }
 
     private IEnumerator ApriCassa()
