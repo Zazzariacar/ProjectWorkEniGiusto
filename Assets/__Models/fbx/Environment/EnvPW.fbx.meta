@@ -3,7 +3,77 @@ guid: 370a53101711fa84f816d4e8262029b1
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: All_01.001
+    second: {fileID: 2100000, guid: 4544b5560695457468b0471fef3af9fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 14fda087407760241ac19cda175abb3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.027
+    second: {fileID: 2100000, guid: 1ad02ff27b2ca71468a5f003e4f7eba1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.030
+    second: {fileID: 2100000, guid: a1cd846bc66ea6641b188a0bb0b616e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.031
+    second: {fileID: 2100000, guid: 2676114891999614da6520892529d87a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.032
+    second: {fileID: 2100000, guid: 17ffb25d218eff7489507eea29ac6384, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tree_01.001
+    second: {fileID: 2100000, guid: dcf8729d6fc670c41983f93bbf313b15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tree_01.002
+    second: {fileID: 2100000, guid: 323c19f97d4eac44186ab673b45a4cf3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tree_01_Leaves.001
+    second: {fileID: 2100000, guid: 61bc0565b8efb414fa71184a44b451cf, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: All_lp_All_01_BaseMap
+    second: {fileID: 2800000, guid: 2705fc37bc19ab646856b91b30a844e8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_TreeAlpha_02
+    second: {fileID: 2800000, guid: f96676b869f9e944b8fc9d8c9a1f4ba7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Terreno.001
+    second: {fileID: 2800000, guid: 015fc03a4f1ad714dbba11b637f7487a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tree_01_lp_Tree_BaseMap
+    second: {fileID: 2800000, guid: fee250538e3989d4ea48575f1d2048de, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: rail
+    second: {fileID: 2800000, guid: a1c81f6e9d4ee474eace8049cb81bca7, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
